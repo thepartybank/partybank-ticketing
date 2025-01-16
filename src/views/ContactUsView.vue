@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 
 <template>
-  <p class="bg-red-300 underline">hello from contact us</p>
+  <p class="underline">hello from contact us</p>
 </template>

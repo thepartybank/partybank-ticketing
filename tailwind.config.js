@@ -18,6 +18,10 @@ export default {
         extraBold: '800',
         black: '900',
       },
+
+      colors: {
+        'primary-red': '#E91B41',
+      },
     },
   },
   plugins: [],

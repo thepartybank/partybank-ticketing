@@ -1,5 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import BannerComponent from '@/components/home/BannerComponent.vue'
+</script>
 
 <template>
-  <p class="bg-red-300 underline">hello from homeview</p>
+  <BannerComponent />
 </template>
