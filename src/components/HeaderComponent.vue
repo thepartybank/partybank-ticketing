@@ -18,7 +18,7 @@ function closeMenuAndNavigate(path: string) {
 
 <template>
   <nav
-    class="flex items-center justify-between px-4 py-9 border-b md:px-8 lg:px-20 lg:py-6 lg:pb-5 lg:pr-24"
+    class="flex items-center justify-between px-4 py-9 border-b md:px-8 md:pt-7 md:pb-5 md:pr-9 font-redHat font-semibold"
   >
     <!-- Logo -->
     <div class="flex items-center space-x-2" @click="closeMenuAndNavigate('/')">
@@ -36,7 +36,7 @@ function closeMenuAndNavigate(path: string) {
     <!-- Create Event Button (Desktop) -->
     <div class="hidden md:block">
       <button
-        class="px-4 py-2 text-white bg-red-500 rounded-full shadow-md hover:bg-red-600"
+        class="px-4 py-2 text-white bg-red-500 rounded-full shadow-md hover:bg-red-600 font-bold"
         @click="router.push('/create-events')"
       >
         Create an event
