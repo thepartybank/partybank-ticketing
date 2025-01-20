@@ -1,9 +1,9 @@
 <template>
-  <div class="flex flex-col items-center mt-8 lg:mt-16">
+  <div class="flex flex-col items-center mt-8 lg:mt-16 lg:bg-red-500">
     <p class="bg-secondary-red font-redHat text-sm rounded-full px-3 py-1 mb-4 lg:mb-7">About us</p>
 
     <div
-      class="font-redHat font-medium text-[20px] lg:text-5xl flex flex-col items-center lg:space-y-2 space-y-1"
+      class="font-redHat font-medium text-[20px] lg:text-5xl md:text-3xl flex flex-col items-center lg:space-y-2"
     >
       <p class="">At partybank, we’re all about</p>
       <div class="flex gap-1 items-center">

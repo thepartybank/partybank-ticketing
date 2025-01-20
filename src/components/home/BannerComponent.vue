@@ -5,7 +5,7 @@
       Best <span class="text-primary-red">Memories </span> Deposited
     </h1>
     <p
-      class="text-[20px] lg:text-2xl lg:mt-6 font-normal font-inter text-primary-black text-center px-4"
+      class="text-[20px] lg:text-2xl mt-4 lg:mt-6 font-light font-inter text-primary-black text-center px-4 sm:w-2/5 md:w-1/2"
     >
       Where every tickets holds a celebration to secure celebrations that leave a lasting impact.
     </p>

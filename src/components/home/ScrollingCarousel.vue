@@ -56,7 +56,3 @@ export default defineComponent({
   width: 200%;
 }
 </style>
-
-<style>
-@import 'tailwindcss/tailwind.css';
-</style>

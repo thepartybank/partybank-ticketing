@@ -54,7 +54,7 @@ function closeMenuAndNavigate(path: string) {
     <!-- Create Event Button (Desktop) -->
     <div class="hidden md:block">
       <button
-        class="px-4 py-2 text-white bg-red-500 rounded-full shadow-md hover:bg-red-600 font-bold text-xl font-redHat"
+        class="px-4 py-2 text-white bg-primary-red rounded-full shadow-md hover:bg-red-600 font-bold text-xl font-redHat"
         @click="router.push('/create-events')"
       >
         Create an event
