@@ -23,6 +23,7 @@ export default {
         'primary-red': '#E91B41',
         'primary-black': '#171717',
         'secondary-red': '#FEEFF2',
+        'secondary-text': '#181818',
       },
     },
   },

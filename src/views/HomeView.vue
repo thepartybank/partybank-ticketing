@@ -7,6 +7,8 @@ import PartnersComponent from '@/components/home/PartnersComponent.vue'
 
 import ScrollingCarousel from '@/components/home/ScrollingCarousel.vue'
 
+import TrendingEvent from '@/components/home/TrendingEvent.vue'
+
 const carouselImages = [
   '/images/img_1.webp',
   '/images/img_2.webp',
@@ -24,4 +26,5 @@ const carouselImages = [
 
   <HaveAnEvent />
   <PartnersComponent />
+  <TrendingEvent />
 </template>
