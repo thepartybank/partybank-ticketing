@@ -20,7 +20,7 @@
         <div
           v-for="(item, index) in items"
           :key="index"
-          class="shrink-0 w-full max-w-[309px] md:max-w-[846px] max-h-[419px] md:max-h-[707px] relative"
+          class="shrink-0 w-full max-w-[309px] md:max-w-[846px] sm:max-w-[586px] sm:max-h-[507px] max-h-[419px] md:max-h-[707px] relative"
           :class="{
             'scale-100 z-10 h-[707px]': index === currentIndex,
             'scale-90 h-[607px]': index !== currentIndex,
@@ -52,6 +52,12 @@
       </button>
     </div>
   </section>
+
+  <div class="flex justify-center pb-10">
+    <button class="bg-primary-red rounded-full text-white h-10 md:h-14 px-9 md:px-16">
+      See all events
+    </button>
+  </div>
 </template>
 
 <script lang="ts" setup>
