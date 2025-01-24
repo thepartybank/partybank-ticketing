@@ -18,7 +18,7 @@ function closeMenuAndNavigate(path: string) {
 
 <template>
   <nav
-    class="flex items-center justify-between px-4 py-6 border-b md:px-8 md:pt-7 md:pb-5 md:pl-14 md:pr-16 font-redHat font-semibold"
+    class="flex items-center justify-between px-4 py-6 border-b md:px-8 md:pt-7 md:pb-5 md:pl-14 md:pr-16 font-redHat font-normal"
   >
     <!-- Logo -->
     <div class="flex items-center space-x-2 cursor-pointer" @click="closeMenuAndNavigate('/')">
@@ -28,24 +28,22 @@ function closeMenuAndNavigate(path: string) {
     <!-- Desktop Menu -->
     <ul class="hidden md:flex space-x-6 xl:space-x-24 text-gray-800">
       <li>
-        <RouterLink to="/about-us" class="hover:text-red-500 leading-5 font-semibold font-redHat"
+        <RouterLink to="/about-us" class="hover:text-red-500 leading-5 font-normal font-redHat"
           >About Us</RouterLink
         >
       </li>
       <li>
-        <RouterLink
-          to="/create-events"
-          class="hover:text-red-500 leading-5 font-semibold font-redHat"
+        <RouterLink to="/create-events" class="hover:text-red-500 leading-5 font-normal font-redHat"
           >Create Events</RouterLink
         >
       </li>
       <li>
-        <RouterLink to="/faqs" class="hover:text-red-500 leading-5 font-semibold font-redHat"
+        <RouterLink to="/faqs" class="hover:text-red-500 leading-5 font-normal font-redHat"
           >FAQs</RouterLink
         >
       </li>
       <li>
-        <RouterLink to="/contact-us" class="hover:text-red-500 leading-5 font-semibold font-redHat"
+        <RouterLink to="/contact-us" class="hover:text-red-500 leading-5 font-normal font-redHat"
           >Contact Us</RouterLink
         >
       </li>
@@ -54,7 +52,7 @@ function closeMenuAndNavigate(path: string) {
     <!-- Create Event Button (Desktop) -->
     <div class="hidden md:block">
       <button
-        class="px-4 py-2 text-white bg-primary-red rounded-full shadow-md hover:bg-red-600 font-bold text-xl font-redHat"
+        class="px-9 py-2 text-white bg-primary-red rounded-full shadow-md hover:bg-red-600 font-normal font-redHat h-12"
         @click="router.push('/create-events')"
       >
         Create an event
@@ -107,7 +105,7 @@ function closeMenuAndNavigate(path: string) {
         <li>
           <button
             @click="closeMenuAndNavigate('/create-events')"
-            class="px-4 py-2 text-white bg-primary-red rounded-full shadow-md hover:bg-red-600"
+            class="px-4 py-2 text-white bg-primary-red rounded-full font-normal shadow-md hover:bg-red-600"
           >
             Create an event
           </button>

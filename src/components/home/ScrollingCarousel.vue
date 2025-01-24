@@ -1,5 +1,5 @@
 <template>
-  <div class="relative overflow-hidden lg:mt-20 mt-5">
+  <div class="relative overflow-hidden md:mt-14 mt-5">
     <div
       class="flex items-center gap-2 animate-scroll"
       :style="{ '--scroll-speed': scrollSpeed + 's' }"

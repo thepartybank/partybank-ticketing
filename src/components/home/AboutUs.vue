@@ -1,9 +1,11 @@
 <template>
-  <div class="flex flex-col items-center mt-8 lg:mt-16">
-    <p class="bg-secondary-red font-redHat text-sm rounded-full px-3 py-1 mb-4 lg:mb-7">About us</p>
+  <div class="flex flex-col items-center mt-8 md:mt-10 lg:mt-16">
+    <h2 class="bg-secondary-red font-redHat text-sm rounded-full px-3 py-1 mb-4 md:mt-5 lg:mb-7">
+      About us
+    </h2>
 
     <div
-      class="font-redHat font-medium text-[20px] lg:text-5xl sm:text-3xl flex flex-col items-center lg:space-y-2"
+      class="font-redHat font-medium text-[20px] lg:text-5xl md:text-4xl sm:text-3xl flex flex-col items-center md:space-y-1 lg:space-y-2"
     >
       <p class="">At partybank, we’re all about</p>
       <div class="flex gap-1 items-center">
@@ -40,7 +42,7 @@
       <p class="hidden lg:block">and experienced</p>
       <p class="block lg:hidden">organized and experienced</p>
     </div>
-    <button class="bg-primary-red text-white p-3 px-5 rounded-full mt-5 lg:mt-11">
+    <button class="bg-primary-red text-white p-3 px-6 rounded-full mt-5 md:mt-8 h-12 lg:mt-11">
       More about partybank
     </button>
   </div>
