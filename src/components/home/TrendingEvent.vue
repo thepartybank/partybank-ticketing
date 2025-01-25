@@ -8,13 +8,7 @@
       <!-- Slider Wrapper -->
       <div
         class="flex items-center transition-transform duration-500 ease-in-out"
-        :class="{
-          '-translate-x-[-3%] md:-translate-x-[-3%]': currentIndex === 0,
-          '-translate-x-[75%] md:-translate-x-[40%]': currentIndex === 1,
-
-          '-translate-x-[150%] sm:-translate-x-[136%] md:-translate-x-[80%] xl:-translate-x-[80%] lg:-translate-x-[105%]':
-            currentIndex === 2,
-        }"
+        :style="sliderStyle"
         ref="slider"
       >
         <!-- Slider Cards -->
@@ -65,7 +59,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 
 interface Item {
   title: string
@@ -101,6 +95,91 @@ const items: Item[] = [
 ]
 
 const currentIndex = ref(1)
+const screenWidth = ref(window.innerWidth)
+
+const calculateTranslateX = (width: number, index: number) => {
+  switch (index) {
+    case 0:
+      return 3
+    case 1:
+      return width < 345
+        ? -85
+        : width < 361
+          ? -78
+          : width < 376
+            ? -73
+            : width < 391
+              ? -68
+              : width < 400
+                ? -150
+                : width < 415
+                  ? -61
+                  : width < 431
+                    ? -59
+                    : width < 541
+                      ? -37
+                      : width < 769
+                        ? -50
+                        : width < 821
+                          ? -43
+                          : width < 854
+                            ? -40
+                            : width < 913
+                              ? -34
+                              : width < 1025
+                                ? -55
+                                : width < 1130
+                                  ? -90
+                                  : width < 1190
+                                    ? -80
+                                    : width < 1281
+                                      ? -50
+                                      : -40
+    case 2:
+      return width < 345
+        ? -175
+        : width < 361
+          ? -160
+          : width < 376
+            ? -150
+            : width < 391
+              ? -140
+              : width < 400
+                ? -150
+                : width < 413
+                  ? -128
+                  : width < 431
+                    ? -119
+                    : width < 541
+                      ? -77
+                      : width < 769
+                        ? -100
+                        : width < 821
+                          ? -88
+                          : width < 854
+                            ? -80
+                            : width < 913
+                              ? -70
+                              : width < 1025
+                                ? -110
+                                : width < 1130
+                                  ? -90
+                                  : width < 1190
+                                    ? -80
+                                    : width < 1281
+                                      ? -115
+                                      : -80
+    default:
+      return 0
+  }
+}
+
+const sliderStyle = computed(() => {
+  const translateX = calculateTranslateX(screenWidth.value, currentIndex.value)
+  return {
+    transform: `translateX(${translateX}%)`,
+  }
+})
 
 const prevSlide = () => {
   currentIndex.value = Math.max(0, currentIndex.value - 1)
@@ -110,4 +189,17 @@ const nextSlide = () => {
   const maxIndex = items.length - 1
   currentIndex.value = Math.min(maxIndex, currentIndex.value + 1)
 }
+
+const updateScreenWidth = () => {
+  screenWidth.value = window.innerWidth
+}
+
+// Add and remove event listeners
+onMounted(() => {
+  window.addEventListener('resize', updateScreenWidth)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', updateScreenWidth)
+})
 </script>

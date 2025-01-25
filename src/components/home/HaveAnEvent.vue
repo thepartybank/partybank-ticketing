@@ -1,7 +1,9 @@
 <template>
-  <div class="grid md:grid-cols-2 px-3 gap-[26px] mt-16 lg:mt-[75px]">
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 px-3 md:px-10 gap-8 md:gap-4 lg:gap-5 mt-16 lg:mt-24 relative"
+  >
     <div
-      class="bg-primary-red text-white rounded-[20px] flex-1 lg:pl-14 pt-8 md:pt-14 pb-6 px-4 sm:min-h-[443px]"
+      class="bg-primary-red text-white rounded-[20px] lg:pl-14 pt-8 md:pt-14 pb-6 px-4 md:px-6 sm:min-h-[443px] md:min-h-[466px]"
     >
       <h2 class="text-4xl md:text-5xl lg:text-6xl font-redHat font-medium">
         Have an <br class="hidden sm:block" />
@@ -16,13 +18,34 @@
       </p>
 
       <button
-        class="bg-white rounded-full text-primary-red py-3 w-full mt-10 2xl:mt-[70px] sm:w-[236px] h-12"
+        class="bg-white rounded-full text-primary-red py-3 w-full mt-10 md:mt-14 2xl:mt-[70px] sm:w-[236px] h-12"
       >
         Create an event
       </button>
     </div>
-    <div class="flex-1">
-      <img src="/images/human 1.png" alt="" class="h-full object-cover w-full" />
+
+    <div
+      class="relative bg-[url('/images/human_1.svg')] bg-cover bg-no-repeat rounded-[10px] bg-center h-[330px] md:h-auto w-full"
+    >
+      <picture>
+        <source srcset="/images/frame_1.svg" media="(min-width: 768px)" class="" />
+        <source srcset="/images/frame_m_1.svg" media="(max-width: 767px)" class="" />
+        <img
+          src="/images/frame_1.svg"
+          alt="Top Right Image"
+          class="absolute -top-16 -left-10 lg:-left-10 md:-left-12 z-10 scale-75 md:scale-[80%] lg:scale-[85%]"
+        />
+      </picture>
+
+      <picture>
+        <source srcset="/images/frame_2.svg" media="(min-width: 768px)" />
+        <source srcset="/images/frame_m_2.svg" media="(max-width: 767px)" />
+        <img
+          src="/images/frame_2.svg"
+          alt="Bottom Left Image"
+          class="absolute -bottom-20 -right-10 z-10 scale-75 md:scale-[80%] lg:scale-[85%] md:-right-11 lg:-right-12"
+        />
+      </picture>
     </div>
   </div>
 </template>

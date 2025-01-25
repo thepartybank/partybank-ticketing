@@ -3,6 +3,9 @@ export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      screens: {
+        xs: '370px',
+      },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
         redHat: ['"Red Hat Display"', 'sans-serif'],
